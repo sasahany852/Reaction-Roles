@@ -9,7 +9,7 @@ app.use('/ping', (req, res) => {
 
 const Client = require('./Structures/legendJsClient.js');
 const Discord = require('discord.js');
-const { prefix } = require('./config.json');
+const { prefix, token } = require('./config.json');
 
 const client = new Client({
   disableMentions: 'everyone',
@@ -97,7 +97,6 @@ const data = db.get(`reactions_${guild.id}_${reaction.message.id}`)
 member.roles.remove(reaction3.roleId).catch(err => undefined);
 });
 
-client.login(token).catch(err => {
+client.login(token || process.env.token).catch(err => {
   console.log('[ERROR]: Invalid Token Provided');
 });
-client.login(process.env.token);
