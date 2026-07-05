@@ -36,7 +36,7 @@ client.on('ready', () => {
     } channels & ${client.users.cache.size} users`
   );
   console.log('-------------------------------------');
-  client.user.setActivity('Reaction Role Bot', {
+  client.user.setActivity('Mogrem ONE', {
     type: 'WATCHING'
   });
 });
