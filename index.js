@@ -98,8 +98,5 @@ member.roles.remove(reaction3.roleId).catch(err => undefined);
 });
 client.login(process.env.token);
 
-const express = require('express')
-const app = express()
-const port = process.env.PORT || 4000 
 
 
