@@ -96,6 +96,8 @@ const data = db.get(`reactions_${guild.id}_${reaction.message.id}`)
   if (!reaction3) return;
 member.roles.remove(reaction3.roleId).catch(err => undefined);
 });
-
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 4000 
 
 client.login(process.env.token);
