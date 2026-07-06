@@ -97,7 +97,5 @@ const data = db.get(`reactions_${guild.id}_${reaction.message.id}`)
 member.roles.remove(reaction3.roleId).catch(err => undefined);
 });
 
-client.login(token || process.env.token).catch(err => {
-  console.log('[ERROR]: Invalid Token Provided');
-});
+
 client.login(process.env.token);
